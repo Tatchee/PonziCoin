@@ -126,21 +126,21 @@ contract SafeMath {
 
 /// @title Token contract - Implements Standard Token Interface but adds Pyramid Scheme Support :)
 /// @author Rishab Hegde - <contact@rishabhegde.com>
-contract PonziCoin is StandardToken, SafeMath {
+contract PonziCoinLite is StandardToken, SafeMath {
 
     /*
      * Token meta data
      */
-    string constant public name = "PonziCoin";
-    string constant public symbol = "SEC";
+    string constant public name = "PonziCoinLite";
+    string constant public symbol = "SECL";
     uint8 constant public decimals = 3;
 
     uint public buyPrice = 10 szabo;
     uint public sellPrice = 2500000000000 wei;
     uint public tierBudget = 100000;
 
-    // Address of the founder of PonziCoin.
-    address public founder = 0x506A24fBCb8eDa2EC7d757c943723cFB32a0682E;
+    // Address of the founder of PonziCoinLite.
+    address public founder = 0xb7Bd5cD91aAba1D521D208854C236818D1C71c88;
 
     /*
      * Contract functions
@@ -191,7 +191,7 @@ contract PonziCoin is StandardToken, SafeMath {
     }
 
     /// @dev Contract constructor function sets initial token balances.
-    function PonziCoin()
+    function PonziCoinLite()
     {   
         // It's not a good scam unless it's pre-mined
         balances[founder] = 200000;
